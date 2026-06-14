@@ -59,8 +59,7 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                'mysql_attr_ssl_ca' => '/path/to/ca-cert.pem',
-
+                Pdo\Mysql::ATTR_SSL_CA => '/path/to/ca-cert.pem',
             ]) : [],
         ],
 
